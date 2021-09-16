@@ -1,6 +1,9 @@
-.landingpage-container {
-    font-size: 20px;
-    font-weight: bold;
-    color: gray;
+.landingpage-token-wraper {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
