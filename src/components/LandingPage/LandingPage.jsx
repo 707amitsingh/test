@@ -11,6 +11,7 @@ const LandingPage = ({ token, updateToken }) => {
 
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [elasticData, setElaticData] = useState(null);
 
   const handleClose = () => {
     setShowModal(false)
@@ -67,9 +68,10 @@ const LandingPage = ({ token, updateToken }) => {
       },
       body: JSON.stringify({ query: "select * from scanentry" }),
     };
-    const response = await fetch("http://tcq.arkatiss.com/_sql", options).then(
+    const response = await fetch("https://tcq.arkatiss.com/_sql", options).then(
       (data) => data.json()
     );
+    setElaticData(JSON.stringify(response))
   };
 
   return (
@@ -104,6 +106,15 @@ const LandingPage = ({ token, updateToken }) => {
               </Card.Body>
             </Card>
           </div>
+          {
+            elasticData ? <Card id="tokenCard">
+              <Card.Body>
+                <Card.Subtitle className="mb-2 text-muted">
+                  <p>{elasticData}</p>
+                </Card.Subtitle>
+              </Card.Body>
+            </Card> : null
+          }
         </>
       )}
 
