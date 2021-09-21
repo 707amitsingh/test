@@ -1,0 +1,26 @@
+.landingpage-token-wraper {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px
+}
+
+.jumbotron {
+    background-color: lightgray;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid white;
+    display: flex;
+    padding: 10px;
+}
+
+.jumbotron .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
